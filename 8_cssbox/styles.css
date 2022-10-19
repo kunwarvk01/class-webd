@@ -1,0 +1,33 @@
+body {
+    background-color: lightgreen;
+}
+
+.a {
+    background-color: pink;
+    padding: 20px;
+    margin: 20px;
+    border: solid black 5px;
+}
+
+.b {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 20px;
+    border: solid black 5px;
+}
+
+.c {
+    align-items: center;
+    background-color: cyan;
+    border: solid black 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+img {
+    height: 150px;
+    object-fit: cover;
+    width: 400px;
+}

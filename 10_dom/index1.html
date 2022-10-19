@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style media="screen">
+
+</style>
+
+<body>
+    <h1></h1>
+    <button id="btn1" type="button" name="button">Display</button>
+    <p id="demo"></p>
+    <button id="btn2">Welcome</button>
+</body>
+
+<script type="text/javascript">
+    document.getElementById('btn1').addEventListener('click', function() {
+        document.querySelector("h1").innerHTML = new Date();
+    });
+
+    document.getElementById('btn2').addEventListener('click', function() {
+        alert("Welcome to lpu");
+    });
+    document.getElementById('btn2').removeEventListener('click', function() {
+
+    });
+</script>
+
+</html>

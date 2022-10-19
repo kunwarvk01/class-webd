@@ -1,0 +1,26 @@
+body {
+    background-image: url(./bg1.jpg), url(./bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: left, right;
+}
+
+h1 {
+    color: red;
+    font-family: verdana;
+    font-size: 20px;
+    border: white solid 2px;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+#x {
+    font-family: Arial;
+    font-stretch: expanded;
+    color: rgb(255, 0, 255);
+    text-align: center;
+    border: white solid 2px;
+    padding: 10px;
+}
