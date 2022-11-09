@@ -1,8 +1,9 @@
 table, td {
     border: 1px solid black;
+    border-spacing: 10px;
 }
 
-td {
+td, th, tr {
     padding: 50px;
     width: 50px;
 }
