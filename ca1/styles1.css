@@ -1,0 +1,14 @@
+ body {
+     background-image: url('logo1.jpeg');
+     background-repeat: repeat;
+ }
+
+ .container {
+     font-style: italic;
+     font-weight: bold;
+     size: 24px;
+     color: blue;
+     padding: 30px;
+     border: solid 10px green;
+     margin: 0 200px 200px 200px;
+ }
