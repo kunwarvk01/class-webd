@@ -38,7 +38,7 @@
 
   <!-- foodbox  -->
   <div class="container ">
-    <h1 class="head text-center">Customer's <span class="highlight">Favourites Food</span></h1>
+    <h1 class="head text-center">Order From <span class="highlight">Nearby Outlets</span></h1>
     <br>
     <div class="row">
       <div class="col-lg-3" *ngFor="let fd of foodData;index as i">
@@ -51,6 +51,27 @@
     </div>
     <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
   </div>
+
+  <br><br>
+
+  <div class="container ">
+    <h1 class="head text-center">Customer <span class="highlight">Favourite Foods</span></h1>
+    <br>
+    <div class="row">
+      <div class="col-lg-3" *ngFor="let fd of foodData;index as i">
+        <div class="foodbox" *ngIf="i<=3">
+          <img src="{{fd.foodImg}}" />
+          <h1>{{fd.foodName}}</h1>
+          <p>{{fd.foodPrice | currency:'INR'}}</p>
+        </div>
+      </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+  </div>
+
+
+
+
   <br><br>
   <hr>
 </div>
