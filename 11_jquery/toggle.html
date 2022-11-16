@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <style>
+        .headings {
+            color: cadetblue;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .paras {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LOVELY PROFESSIONAL UNIVERSITY</h1>
+    <h2>PUNJAB</h2>
+    <p>hello</p>
+    <p>hey there</p>
+    <p>how are you</p>
+    <button>Add class</button>
+
+    <button id="btn2">Append list item</button>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+
+    <input type="button" value=":) Hey I'm a mimicker" id="btn"><br><br>
+
+    <form>
+        <input type="text" name="name" id="name"><br><br>
+        <input type="submit" name="submit" id="btn" disabled="disabled"><br>
+    </form>
+
+
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("h1, h2").addClass("headings");
+            $("p").addClass("paras");
+        });
+    });
+
+    $(document).ready(function() {
+        $("#btn2").click(function() {
+            $("ul").append("<li>Appended item</li>");
+        });
+    });
+
+    $(document).ready(function() {
+        $("#btn").on({
+            mouseover: function() {
+
+                //instead of "attr", we can also use "prop"
+                $("#btn").attr({
+                    "type": "text",
+                    "value": ""
+                }).css("background", "lightgreen");
+            },
+            mouseout: function() {
+                $("#btn").attr({
+                    "type": "button",
+                    "value": ":) Hey I'm a mimicker"
+                }).css("background", "");
+            }
+        });
+    })
+
+    $('#name').keyup(function() {
+        if ($('#name').val() != '') {
+            $('#btn').removeAttr('disabled');
+        } else {
+            $('#btn').attr('disabled', 'disabled');
+        }
+
+    })
+</script>
+
+</html>
