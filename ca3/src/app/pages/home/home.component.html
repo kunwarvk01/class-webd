@@ -37,8 +37,8 @@
   </div>
 
   <!-- foodbox  -->
-  <div class="container ">
-    <h1 class="head text-center">Order From <span class="highlight">Nearby Outlets</span></h1>
+  <div class="container " [routerLink]="['/menu']">
+    <h1 class=" head text-center">Order From <span class="highlight">Nearby Outlets</span></h1>
     <br>
     <div class="row">
       <div class="col-lg-3">
@@ -78,7 +78,7 @@
     <div class="row">
       <div class="col-lg-3" *ngFor="let fd of foodData;index as i">
         <div class="foodbox" *ngIf="i<=3">
-          <img src="{{fd.foodImg}}" />
+          <img src="{{fd.foodImg}}" [routerLink]="['/menu',fd.id] " />
           <h1>{{fd.foodName}}</h1>
           <p>{{fd.foodPrice | currency:'INR'}}</p>
         </div>

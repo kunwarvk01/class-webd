@@ -1,21 +1,21 @@
 <div class="container mt-5 mb-5">
   <h1>Contact</h1>
-  <form class="col-lg-8">
+  <form class="col-lg-8" name="myForm" onsubmit="return(validate());">
     <div class="row">
       <div class="col-lg-6 mt-2 mb-2">
-        <input type="text" class="form-control" placeholder="Enter First Name">
+        <input type="text" name="fName" class="form-control" placeholder="Enter First Name">
       </div>
       <div class="col-lg-6 mt-2 mb-2">
-        <input type="text" class="form-control" placeholder="Enter Last Name">
+        <input type="text" name="sName" class="form-control" placeholder="Enter Last Name">
       </div>
       <div class="col-lg-12 mt-2 mb-2">
-        <input type="text" class="form-control" placeholder="Enter Email ID">
+        <input type="email" name="EMail" class="form-control" placeholder="Enter Email ID">
       </div>
       <div class="col-lg-12 mt-2 mb-2">
-        <input type="text" class="form-control" placeholder="Enter Mobile">
+        <input type="tel" name="Num" class="form-control" placeholder="Enter Mobile">
       </div>
       <div class="col-lg-12">
-        <button class="btn btn-md btn-dark">Submit</button>
+        <input class="btn btn-md btn-dark" type="submit" value="Submit" />
       </div>
     </div>
   </form>
