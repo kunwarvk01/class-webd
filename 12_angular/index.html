@@ -1,0 +1,277 @@
+import { Component } from '@angular/core';
+
+@Component({
+selector: 'Satya-App',
+template: `<div style='color:blue' *ngIf="true">You can See Satyaprakash....</div>`
+})
+export class AppComponent {
+
+}
+
+10:40 AM
+template: `<div style='color:blue' *ngIf="true">You can See Satyaprakash....</div>
+
+10:41 AM
+app.component.ts with NgSwitch implementation
+import { Component } from '@angular/core';
+
+@Component({
+selector: 'Satya-App',
+template: `<h2>{{title}}</h2>
+<p *ngIf="showElement">Show Element</p>
+<div [ngSwitch]="inpvalue">
+<p style='color:blue' *ngSwitchCase="1">You have selected M S Dhoni</p>
+<p style='color:blue' *ngSwitchCase="2">You have selected Sachin Tendulkar</p>
+<p style='color:blue' *ngSwitchCase="3">You have selected Satyaprakash Samantaray</p>
+<p style='color:red' *ngSwitchDefault>Sorry! Invalid selection....</p>
+</div>`
+})
+export class AppComponent {
+
+inpvalue: number = 3;
+}
+
+10:42 AM
+
+
+app.component.ts with NgSwitch implementation
+import { Component } from '@angular/core';
+
+@Component({
+selector: 'Satya-App',
+template: `<h2>{{title}}</h2>
+<p *ngIf="showElement">Show Element</p>
+<div [ngSwitch]="inpvalue">
+<p style='color:blue' *ngSwitchCase="1">You have selected M S Dhoni</p>
+<p style='color:blue' *ngSwitchCase="2">You have selected Sachin Tendulkar</p>
+<p style='color:blue' *ngSwitchCase="3">You have selected Satyaprakash Samantaray</p>
+<p style='color:red' *ngSwitchDefault>Sorry! Invalid selection....</p>
+</div>`
+})
+export class AppComponent {
+
+inpvalue: number = 3;
+}
+
+11:15 AM
+Example 1 for Route
+ng g c components/home
+ng g c components/about
+ng g c components/contact
+
+app-routing.module.ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+
+const routes: Routes = [
+{
+path:'home',
+component:HomeComponent
+},
+{
+path:'about',
+component:AboutComponent
+},
+{
+path:'contact',
+component:ContactComponent
+}
+];
+
+@NgModule({
+imports: [RouterModule.forRoot(routes)],
+exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+
+app.module.ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+
+@NgModule({
+declarations: [
+AppComponent,
+HomeComponent,
+AboutComponent,
+ContactComponent
+],
+imports: [
+BrowserModule,
+AppRoutingModule
+],
+providers: [],
+bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+app.component.html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0px;
+overflow: hidden;
+background-color: lightgray;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: blue;
+font-size:20px;
+text-align: center;
+padding: 10px 20px;
+text-decoration: none;
+}
+.active{
+background-color: gray;
+color: white;
+}
+li a:hover {
+background-color: orange;
+color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+<li><a routerLink="home">Home</a></li>
+<li><a routerLink="about">About</a></li>
+<li><a routerLink="contact">Contact</a></li>
+</ul>
+<router-outlet></router-outlet>
+</body>
+</html>
+
+Example 2 for Route Parameters
+ng g c components/user
+
+app-routing.module.ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { UserComponent } from './components/user/user.component';
+const routes: Routes = [
+{
+path:'user/:name',
+component:UserComponent
+}
+];
+
+@NgModule({
+imports: [RouterModule.forRoot(routes)],
+exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+app.module.ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UserComponent } from './components/user/user.component';
+
+@NgModule({
+declarations: [
+AppComponent,
+UserComponent
+],
+imports: [
+BrowserModule,
+AppRoutingModule
+],
+providers: [],
+bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+user.component.ts
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+@Component({
+selector: 'app-user',
+templateUrl: './user.component.html',
+styleUrls: ['./user.component.scss']
+})
+export class UserComponent implements OnInit {
+name='';
+constructor(private route:ActivatedRoute) { }
+
+ngOnInit(): void {
+this.name = this.route.snapshot.params.name;
+}
+}
+
+
+user.component.html
+<p>user works!</p>
+<h1>{{name}}</h1>
+
+11:15 AM
+Shahnazdeep Singh : 12011612
+app.component.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0px;
+overflow: hidden;
+background-color: lightgray;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: blue;
+font-size:20px;
+text-align: center;
+padding: 10px 20px;
+text-decoration: none;
+}
+.active{
+background-color: gray;
+color: white;
+}
+li a:hover {
+background-color: orange;
+color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+<li><a routerLink="home">Home</a></li>
+<li><a routerLink="about">About</a></li>
+<li><a routerLink="contact">Contact</a></li>
+<li><a routerLink="user/DEEP">User</a></li>
+</ul>
+<router-outlet></router-outlet>
+</body>
+</html>
