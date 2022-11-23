@@ -1,115 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>HTML basic tags</title>
-    </head>
-    <body>
-        <center>
-            <h1>Personal Portfolio</h1>
-            <a href="https://google.com">
-                <img src="https://images.pexels.com/photos/10081060/pexels-photo-10081060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image here" width="100"></a>
-            <br>
-        </center>
-        <h1>Unordered list</h1>
-        <ul>
-            <li type="square">
-                <a href="https://www.linkedin.com/in/kunwarvk01/"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\linkedin.png" width="25" alt=""></a>&nbsp&nbsp Linkedin</li>
-            <li type="disk">
-                <a href="https://www.instagram.com/kunwar.vimal"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\instagram.png" width="25" alt=""></a>&nbsp&nbsp Instagram</li>
-            <li type="circle">
-                <a href="https://www.github.com/kunwarvk01"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\github.png" width="25" alt=""></a>&nbsp&nbsp Github</li>
-        </ul>
+<html>
 
-        <h1>definition list</h1>
-        <ol>
-            <dl>
-                <li>
-                    <dt>Rohit</dt>
-                </li>
+<head>
+    <title>HTML basic tags</title>
+</head>
+
+<body>
+    <center>
+        <h1>Personal Portfolio</h1>
+        <a href="https://google.com">
+            <img src="https://images.pexels.com/photos/10081060/pexels-photo-10081060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image here" width="100"></a>
+        <br>
+    </center>
+    <h1>Unordered list</h1>
+    <ul>
+        <li type="square">
+            <a href="https://www.linkedin.com/in/kunwarvk01/"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\linkedin.png" width="25" alt="">Linkedin</a>
+        </li>
+        <li type="disk">
+            <a href="https://www.instagram.com/kunwar.vimal"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\instagram.png" width="25" alt="">Instagram</a>
+        </li>
+        <li type="circle">
+            <a href="https://www.github.com/kunwarvk01"><img src="C:\Users\kunwa\Desktop\webd\programming pathshala\portfolio\github.png" width="25" alt="">Github</a>
+        </li>
+    </ul>
+
+    <h1>definition list</h1>
+    <ol>
+        <dl>
+            <li>
+                <dt>Rohit</dt>
                 <dd>Right handed</dd>
-                <li>
-                    <dt>Voult</dt>
-                </li>
+            </li>
+            <li>
+                <dt>Voult</dt>
                 <dd>Left arm bowler</dd>
-            </dl>
-        </ol>
-        <br>
-        <br>
+            </li>
+        </dl>
+    </ol>
+    <br>
+    <br>
 
-        <nav>
-            <a href="">GOOGLE</a>
-            |
-            <a href="">FACEBOOK</a>
-            |
-            <a href="">LINKEDIN</a>
-            |
-        </nav>
-        <br>
+    <nav>
+        <a href="">GOOGLE</a>
+        |
+        <a href="">FACEBOOK</a>
+        |
+        <a href="">LINKEDIN</a>
+        |
+    </nav>
+    <br>
 
-        <style>
-            body {
-                background: lightcyan;
-            }
-            table,
-            td,
-            th {
-                border: 1px solid black;
-                border-spacing: 5px;
-            }
-            td,
-            th {
-                padding: 10px;
-            }
-        </style>
+    <style>
+        body {
+            background: lightcyan;
+        }
 
-        <table>
-            <caption>
-                <h3>CRICKET TEAM</h3>
-            </caption>
-            <colgroup span="3" style="background:lightgreen">
-                <tr>
-                    <th>PLAYERNAME</th>
-                    <th>PLAYERTEAM</th>
-                    <th>JERSEYNUMBER</th>
-                </tr>
-                <tr>
-                    <td>Rohit</td>
-                    <td rowspan="2">India</td>
-                    <td>45</td>
-                </tr>
-                <tr>
-                    <td>Dhoni</td>
-                    <td>07</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Chris Gayle (West Indies)</td>
-                    <td>33</td>
-                </tr>
-            </table>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-spacing: 5px;
+        }
+    </style>
 
-            <br><br><br><br>
+    <table>
+        <caption>
+            <h3>CRICKET TEAM</h3>
+        </caption>
+        <colgroup span="3" style="background:lightgreen">
+        <tr>
+            <th>PLAYERNAME</th>
+            <th>PLAYERTEAM</th>
+            <th>JERSEYNUMBER</th>
+        </tr>
+        <tr>
+            <td>Rohit</td>
+            <td rowspan="2">India</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Dhoni</td>
+            <td>07</td>
+        </tr>
+        <tr>
+            <td colspan="2">Chris Gayle (West Indies)</td>
+            <td>33</td>
+        </tr>
+    </table>
 
-            <table>
-                <tr>
-                    <td>1</td>
-                    <td colspan="3">2</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">3</td>
-                    <td style="background:red">4</td>
-                    <td style="background:red">5</td>
-                    <td rowspan="2" style="background:yellow">6</td>
-                </tr>
-                <tr>
-                    <td style="background:red">7</td>
-                    <td style="background:red">8</td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="background:yellow">9</td>
-                    <td style="background:yellow">10</td>
-                </tr>
-            </table>
+    <br><br><br><br>
 
-        </body>
-    </html>
+    <table>
+        <tr>
+            <td>1</td>
+            <td colspan="3">2</td>
+        </tr>
+        <tr>
+            <td rowspan="3">3</td>
+            <td style="background:red">4</td>
+            <td style="background:red">5</td>
+            <td rowspan="2" style="background:yellow">6</td>
+        </tr>
+        <tr>
+            <td style="background:red">7</td>
+            <td style="background:red">8</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background:yellow">9</td>
+            <td style="background:yellow">10</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
