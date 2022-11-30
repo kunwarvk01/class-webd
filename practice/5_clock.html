@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-spacing: 0px;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>HH</td>
+            <td>MM</td>
+            <td>SS</td>
+        </tr>
+        <tr>
+            <td id="hours">00</td>
+            <td id="minutes">00</td>
+            <td id="seconds">00</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <button id="start">Start</button>
+</body>
+
+<script>
+    let hh = 00;
+    let mm = 00;
+    let ss = 00;
+
+    let button = document.getElementById('start');
+    button.onclick = function() {
+        setInterval(function() {
+            ss++;
+            if (ss >= 60) {
+                mm++;
+                ss = 0;
+            }
+            if (mm >= 60) {
+                hh++;
+                mm = 0;
+            }
+            if (hh >= 24) {
+                hh = 0;
+            }
+            document.getElementById('seconds').innerHTML = ss;
+            document.getElementById('minutes').innerHTML = mm;
+            document.getElementById('hours').innerHTML = hh;
+        }, 1000);
+    }
+</script>
+
+</html>

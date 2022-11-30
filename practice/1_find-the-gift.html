@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <button id="0">one</button>
+    <button id="1">two</button>
+    <button id="2">three</button>
+    <button id="3">four</button>
+    <button id="4">five</button>
+    <button id="5">six</button>
+</body>
+
+
+<script>
+    var random = 6 * Math.random(); // 0-1;
+    random = Math.floor(random);
+    console.log(random);
+    document.getElementById(random).addEventListener('click', function() {
+        alert("You got the gift");
+    })
+
+    for (var i = 0; i < 6; i++) {
+        if (i != random) {
+            document.getElementById(i).addEventListener('click', function() {
+                alert("sorry");
+            })
+        }
+    }
+</script>
+
+</html>
